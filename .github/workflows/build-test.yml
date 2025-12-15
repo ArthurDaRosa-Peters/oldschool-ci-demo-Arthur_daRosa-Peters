@@ -14,10 +14,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Repo auschecken
-        run: echo Repo ausgechecked!
+        run: echo Repo ausgechecked über use!
 
       - name: Docker installieren
-        run: echo Docker installiert!
+        run: echo Docker ist in ubuntu:latest schon installiert!
 
       - name: Docker-Image bauen
         run: docker build -f dockerfile -t oldschool-demo-image-arthur:latest .
