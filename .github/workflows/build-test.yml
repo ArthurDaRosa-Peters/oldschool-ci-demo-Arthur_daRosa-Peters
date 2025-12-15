@@ -19,10 +19,10 @@ jobs:
         run: echo Docker installiert!
 
       - name: Docker-Image bauen
-        run: docker build -f dockerfile -t oldschool-demo-image-arthur
+        run: docker build -f /dockerfile -t oldschool-demo-image-arthur:latest
 
       - name: Container starten
-        run: docker run -d oldschool-demo-image-arthur
+        run: docker run -d oldschool-demo-image-arthur:latest
 
       - name: Ausgabe testen
         run: |
