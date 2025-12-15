@@ -1,0 +1,34 @@
+name: build_and_test
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:  
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Repo auschecken
+        run: echo Repo ausgechecked!
+
+      - name: Docker installieren
+        run: echo Docker installiert!
+
+      - name: Docker-Image bauen
+        run: docker build -f dockerfile -t oldschool-demo-image-arthur
+
+      - name: Container starten
+        run: docker run -d oldschool-demo-image-arthur
+
+      - name: Ausgabe testen
+        run: |
+          output=$(docker run oldschool-demo-image-arthur)
+          echo "$output"
+          if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich!" ]; then
+            echo "❌ Test fehlgeschlagen!"
+            exit 1
+          fi
