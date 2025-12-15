@@ -6,3 +6,5 @@ CI/CD, also nach jedem Push den gepushten Code hochzuladen und zu testen und ans
 
     3. Was war für dich der schwierigste Teil dieser Aufgabe und warum?
 Der build-Command und die Rechtschreibung, weil ich den "." als Argument für den build-Command vergessen habe und zwischendurch mehrere Tippfehler in dem Ausgabecheck hatte
+
+"Meine Pipeline läuft bei push und bei pull_request auf main."
