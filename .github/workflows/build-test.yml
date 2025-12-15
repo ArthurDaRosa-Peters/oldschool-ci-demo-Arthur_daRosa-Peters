@@ -28,7 +28,7 @@ jobs:
         run: |
           output=$(docker run oldschool-demo-image-arthur)
           echo "$output"
-          if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich!" ]; then
+          if [ "$output" != "OldSchool GmbH – automatischer Build erfolgreich! (Arthur da Rosa-Peters)" ]; then
             echo "❌ Test fehlgeschlagen!"
             exit 1
           fi
